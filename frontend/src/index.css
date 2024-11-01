@@ -1,0 +1,89 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background-color: black;
+  color:white;
+}
+
+
+/* budegts */
+/* comp.css */
+.myBudgetsContainer {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #2c2c2c; /* Dark gray background */
+  color: #e0e0e0; /* Light gray text color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+h1 {
+  text-align: center;
+  color: #e0e0e0; /* Light gray for heading */
+  margin-bottom: 20px;
+}
+
+.budgetItem {
+  display: flex;
+  flex-direction: column;
+  background-color: #3a3a3a; /* Slightly lighter gray for the card */
+  border: 1px solid #555; /* Darker border for better visibility */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.budgetItem:hover {
+  transform: scale(1.02); /* Slightly enlarge the card on hover */
+}
+
+.budgetItem p {
+  margin: 5px 0; /* Add some spacing between text */
+  color: #e0e0e0; /* Light gray text color */
+}
+
+.loading, .error {
+  text-align: center;
+  color: #f00; /* Red for errors */
+}
+
+.noBudgetsMessage {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+.budgetItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.budgetItem p {
+  margin: 0;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ff4d4d; /* Red background for delete button */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding around the text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}

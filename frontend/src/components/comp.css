@@ -1,0 +1,534 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow */
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the image is behind the header */
+}
+
+.headerContainer {
+  position: relative; /* To layer over the image */
+  display: flex;
+  justify-content: center; /* Center all items */
+  align-items: center;
+  padding: 15px 20px;
+  color: white; /* Header text color */
+  z-index: 2; /* Ensure the header is above the image */
+  backdrop-filter: blur(5px); /* Optional: Add a blur effect behind the header */
+}
+
+.titleContainer {
+  text-align: center; /* Center-align text */
+}
+
+.titleContainer h1 {
+  font-size: 36px; /* Adjust size as needed */
+  margin: 0; /* Remove default margins */
+}
+
+.buttonContainer {
+  margin-left: 20px; /* Space between title and button */
+}
+
+.loginButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff; /* Bright blue for the button */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #0c7cd5; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .titleContainer h1 {
+      font-size: 24px; /* Smaller size for mobile */
+  }
+
+  .buttonContainer {
+      margin-left: 10px; /* Reduce space on mobile */
+  }
+
+  .loginButton {
+      width: 100%;
+      padding: 12px 0;
+      text-align: center;
+  }
+}
+
+
+
+/* loginpage */
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+.loginTitle {
+  font-size: 2rem; /* Larger title */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loginForm {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 300px; /* Fixed width for the form */
+}
+
+.loginInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e1e; /* Input background */
+  color: #ffffff; /* Input text color */
+  font-size: 1rem;
+}
+
+.loginInput::placeholder {
+  color: #aaaaaa; /* Placeholder color */
+}
+
+.loginButton {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff; /* Bright blue */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #0c7cd5; /* Darker blue on hover */
+}
+
+.footer {
+  margin-top: 15px;
+  text-align: center;
+ 
+}
+
+.registerLink {
+  color: #1e90ff;
+  cursor: pointer;
+  text-decoration: underline; /* Underline for link */
+}
+
+.homeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333333; /* Dark gray */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.homeButton:hover {
+  background-color: #555555; /* Lighter gray on hover */
+}
+.footer {
+  margin-top: 15px;
+  text-align: center;
+  /* Removed background color */
+  padding: 0; /* No padding */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  color: #ffffff; /* Keep text color white for visibility */
+}
+
+.registerLink {
+  color: #1e90ff; /* Link color */
+  cursor: pointer;
+  text-decoration: underline; /* Underline for link */
+}
+
+.footbg{
+  background-color:rgb(30,30,30);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .loginContainer {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  .loginForm {
+    width: 90%; /* Full width on smaller screens */
+  }
+}
+
+
+/* register */
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+.registerTitle {
+  font-size: 2rem; /* Larger title */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff; /* White text color */
+}
+
+.registerForm {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 300px; /* Fixed width for the form */
+}
+
+.registerInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e1e; /* Input background */
+  color: #ffffff; /* Input text color */
+  font-size: 1rem;
+}
+
+.registerInput::placeholder {
+  color: #aaaaaa; /* Placeholder color */
+}
+
+.registerSubmitButton {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff; /* Bright blue */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registerSubmitButton:hover {
+  background-color: #0c7cd5; /* Darker blue on hover */
+}
+
+.registerFooter {
+  margin-top: 15px;
+  text-align: center;
+  color: #ffffff; /* Keep text color white for visibility */
+}
+
+.registerLink {
+  color: #1e90ff; /* Link color */
+  cursor: pointer;
+  text-decoration: underline; /* Underline for link */
+}
+
+.homeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333333; /* Dark gray */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.homeButton:hover {
+  background-color: #555555; /* Lighter gray on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .registerContainer {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  .registerForm {
+    width: 90%; /* Full width on smaller screens */
+  }
+}
+
+/* comp.css */
+/* comp.css */
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  height: 10vh; /* Full height */
+  background-color: #000; /* Black background */
+  color: white; /* White text for contrast */
+  font-family: 'Arial', sans-serif;
+  padding: 20px; /* Add some padding */
+}
+
+.welcomeMessage {
+  font-size: 2rem;
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px;
+}
+
+.logoutButton {
+  padding: 15px 30px;
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: white; /* White text */
+  background-color: #007bff; /* Primary color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  position: absolute; /* Position it at the top */
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+}
+
+.logoutButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* budgetHeader.css */
+
+.budgetHeaderContainer {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  height: 10vh; /* Set container height */
+  background-color: #282c34; /* Background color (adjust as needed) */
+  margin-top:10px;
+}
+
+.budgetButton {
+  padding: 10px 20px; /* Padding around the button text */
+  font-size: 1rem; /* Font size */
+  color: white; /* White text */
+  background-color: #007bff; /* Button background color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 10px; /* Space between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.budgetButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.budget-card {
+  background-color: #1e1e1e; /* Darker card background */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.budget-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #f1c40f; /* Bright color for the title */
+  background-color: #1e1e1e; /* Ensure title background matches card */
+  padding: 10px 0; /* Optional: add padding for better spacing */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  background-color: #1e1e1e; /* Ensure form group background matches card */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white; /* Label text color */
+  background-color: #1e1e1e; /* Ensure label background matches card */
+}
+
+.budget-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1e1e1e; /* Input background matches card */
+  color: white; /* Input text color */
+  transition: border-color 0.3s;
+}
+
+.budget-input:focus {
+  outline: none;
+  border-color: #f1c40f; /* Highlight border on focus */
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1c40f; /* Button background color */
+  color: black; /* Button text color */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e1b12c; /* Darker shade on hover */
+}
+
+#budget{
+  background-color: #1e1e1e;
+}
+
+
+/* make transaction */
+.makeTransactionContainer {
+  background-color: #2a2a2a; /* Dark gray background */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff; /* White text color */
+}
+
+.makeTransactionContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #555; /* Lighter gray border */
+  border-radius: 4px;
+  background-color: #1e1e1e; /* Darker input background */
+  color: #ffffff; /* White text color */
+}
+
+.inputField::placeholder {
+  color: #aaa; /* Placeholder color */
+}
+
+.selectField {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffcc00; /* Gold color for messages */
+}
+
+/* transactions */
+.myTransactionsContainer {
+  background-color: #2a2a2a; /* Dark gray background */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff; /* White text color */
+}
+
+.myTransactionsContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.transactionItem {
+  background-color: #1e1e1e; /* Darker background for transaction items */
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.transactionItem p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.transactionItem p:first-child {
+  font-weight: bold; /* Make the amount bold */
+  color: #ffcc00; /* Gold color for amount */
+}
+
+.transactionItem p:nth-child(2) {
+  color: #007bff; /* Blue color for category */
+}
+
+.transactionItem p:nth-child(3) {
+  color: #28a745; /* Green color for type */
+}
+
+.transactionItem p:last-child {
+  color: #aaa; /* Lighter gray for date */
+}
+
